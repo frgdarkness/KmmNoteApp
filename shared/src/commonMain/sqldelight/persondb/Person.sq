@@ -1,0 +1,15 @@
+CREATE TABLE Person (
+    id INTEGER NOT NULL PRIMARY KEY,
+    name TEXT NOT NULL,
+    age INTEGER NOT NULL
+);
+
+insertPerson:
+INSERT OR REPLACE
+INTO Person
+VALUES (?, ?, ?);
+
+getPersonById:
+SELECT *
+FROM Person
+WHERE id = :id;

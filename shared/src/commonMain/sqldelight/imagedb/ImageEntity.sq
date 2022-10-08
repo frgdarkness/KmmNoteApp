@@ -1,0 +1,46 @@
+CREATE TABLE hockey_player (
+    id INTEGER NOT NULL,
+    name TEXT NOT NULL,
+    number INTEGER NOT NULL
+);
+
+CREATE TABLE MyImageEntity (
+    id TEXT NOT NULL,
+    url TEXT NOT NULL,
+    width INTEGER,
+    height INTEGER
+);
+
+CREATE TABLE Student (
+    id TEXT NOT NULL,
+    name TEXT NOT NULL,
+    age INTEGER
+);
+
+playerForNumber:
+SELECT *
+FROM hockey_player
+WHERE number = ?;
+
+getImageById:
+SELECT *
+FROM MyImageEntity
+WHERE id = :id;
+
+getAllImage:
+SELECT *
+FROM MyImageEntity;
+
+insertImage:
+INSERT OR REPLACE
+INTO MyImageEntity
+VALUES (?, ?, ?, ?);
+
+deleteImageById:
+DELETE FROM MyImageEntity
+WHERE id = :id;
+
+getStudentById:
+SELECT *
+FROM Student
+WHERE id = :id;

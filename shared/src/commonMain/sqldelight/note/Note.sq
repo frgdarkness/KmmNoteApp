@@ -1,0 +1,35 @@
+CREATE TABLE Note (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    lastEditTime TEXT NOT NULL,
+    title TEXT,
+    content TEXT
+);
+
+insertOrUpdateNote:
+INSERT OR REPLACE
+INTO Note
+VALUES (?, ?, ?, ?);
+
+getAllNote:
+SELECT *
+FROM Note;
+
+getNoteById:
+SELECT *
+FROM Note
+WHERE id = :id;
+
+getLastNote:
+SELECT *
+FROM Note
+ORDER BY id DESC
+LIMIT 1;
+
+getNotByContent:
+SELECT *
+FROM Note
+WHERE content LIKE :content;
+
+deleleNote:
+DELETE FROM Note
+WHERE id = :id;

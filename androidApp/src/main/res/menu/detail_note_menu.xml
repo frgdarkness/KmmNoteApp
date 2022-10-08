@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="delete"
+        android:id="@+id/itemDelete"
+        android:icon="@drawable/ic_baseline_delete_24"
+        app:showAsAction="always"/>
+
+    <item
+        android:title="undo"
+        android:id="@+id/itemUndo"
+        android:icon="@drawable/ic_baseline_undo_deactive_24"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:title="redo"
+        android:id="@+id/itemRedo"
+        android:icon="@drawable/ic_baseline_redo_deactive_24"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:title="save"
+        android:id="@+id/itemSave"
+        android:icon="@drawable/ic_baseline_check_24"
+        app:showAsAction="always"
+        />
+</menu>
